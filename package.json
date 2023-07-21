@@ -1,0 +1,30 @@
+{
+  "dependencies": {
+    "dotenv": "^16.1.4",
+    "fountain-js": "file:../fountain-js/dist",
+    "save": "^2.9.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.2.5",
+    "ts-node": "^10.9.1",
+    "typescript": "^5.1.3"
+  },
+  "name": "euripides",
+  "description": "A Fountain parser/convertor with customisable output, designed for writing stage plays",
+  "version": "0.0.1",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "ts-node src/scratch.ts"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/micapam/euripides.git"
+  },
+  "author": "Joshua Mostafa",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/micapam/euripides/issues"
+  },
+  "homepage": "https://github.com/micapam/euripides#readme"
+}
