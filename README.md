@@ -1,6 +1,6 @@
 # Euripedes
 
-A Fountain parser/convertor with customisable output, designed for writing stage plays
+A set of pandoc scripts to help formatting verse plays.
 
 ## Prerequisites
 
@@ -16,8 +16,18 @@ sudo tlmgr update --self
 sudo tlmgr install thalie
 ```
 
-### Ruby
+## Running tests
+
+### Install tools
 
 ```bash
-mise use --global ruby
+mise use -g node        # or install via asdf, nvm etc
+npm i
+brew install jq         # or install via brew, apt, pacman etc
+```
+
+### Run test suite
+
+```bash
+npm run test
 ```

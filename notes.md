@@ -97,4 +97,11 @@ https://www.fountain.io/
 - Combine scenes into a single file
 - Strip pipe characters (with optional following space)
 - Parse via pandoc-fountain and output to Pandoc AST JSON
-- 
+
+## Command to run
+
+```bash
+pandoc -s -f fountain-stage-reader.lua -t json sample.fountain | jq . > out/sample.json
+```
+
+(how to do custom writer?)

@@ -1,0 +1,11 @@
+run:
+  findsCharacterNames:
+    prerequisites:
+      $ref: #/components/parseScript
+    command: "jq '.blocks[0].c[1][0].c[1][0].c[0].c' out/sample.json"
+    outputContains:
+      - "ISABELLA"
+components:
+  parseScript:
+    - echo `pwd`
+    - pandoc -s -f fountain-stage-reader.lua -t json sample.fountain | jq . > out/sample.json
