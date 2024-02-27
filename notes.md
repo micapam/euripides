@@ -53,6 +53,10 @@ A custom pandoc reader for Fountain screenplay markup.
 
 https://github.com/pandoc/pandoc-fountain
 
+### Paru (ruby wrapper for pandoc)
+
+https://github.com/htdebeer/paru
+
 ### CTAN topic: 'Drama script'
 
 https://ctan.org/topic/drama-script
@@ -98,10 +102,17 @@ https://www.fountain.io/
 - Strip pipe characters (with optional following space)
 - Parse via pandoc-fountain and output to Pandoc AST JSON
 
-## Command to run
+## Pandoc workflow
+
+Command should be something like:
 
 ```bash
-pandoc -s -f fountain-stage-reader.lua -t json sample.fountain | jq . > out/sample.json
+pandoc -f fountain-stage-reader.lua script.fountain -s -f thalie.rb -t latex -o script.tex
+pdflatex script.tex
 ```
 
-(how to do custom writer?)
+## Working notes
+
+```bash
+pandoc -f fountain-stage-reader-reader.lua sample.fountain --to latex-thalie-writer.lua > out/sample.tex
+```
